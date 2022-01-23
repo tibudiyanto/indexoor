@@ -4,10 +4,19 @@ Just a way for me to learn more about eth chain data and also maybe try to index
 
 # Goals
 
-- [x] See block info
-- [x] See transaction 
-- [ ] See transaction receipt
-- [ ] See block
+- [x] look up block info
+- [x] look up transaction
+- [x] look up transaction receipt
+- [x] look up block
+- [x] deduce a contract is an ERC721
+- [x] deduce a contract is an ERC1155
+- [x] create a starlette API
+- [x] Create web service endpoint to:
+  - [ ] Fetch an NFT contract info /assets/<contract_addr>
+  - [ ] Fetch metadata of an tokenID /assets/<contract_addr>/<token_id>
+- Index the chain from genesis for all NFT contract
+
+# Dev Notes
 
 ## Blocks
 
@@ -26,9 +35,17 @@ Just a way for me to learn more about eth chain data and also maybe try to index
 | number        | int      |
 | parentHash    | HexBytes |
 | receiptsRoot  | HexBytes |
-| sh3Uncles     | HexBytes |
 | size          | int      |
 | stateRoot     | HexBytes |
 | timestamp     | int      |
 
-- each blocks has different numbers of transaction
+## Contract
+
+| field       | type |
+| ----------- | ---- |
+| name        | str  |
+| type        | str  |
+| addr        | str  |
+| symbol      | str  |
+| totalSupply | int  |
+| tokenURI    | str  |

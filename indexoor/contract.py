@@ -56,6 +56,7 @@ class Contract(_Contract):
 
         if self.get_erc_type() == "ERC1155":
             return ERC721(self.w3, self.addr)
+        raise Exception("Implement this")
 
 
 class ERC721(Contract):

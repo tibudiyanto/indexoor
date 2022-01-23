@@ -1,13 +1,11 @@
 import os
 
-from web3 import Web3
-
-INFURA_URL = os.environ.get("INFURA_URL")
+from web3.auto.infura import w3
 
 
 class Eth:
     def __init__(self):
-        self.w3 = Web3(Web3.HTTPProvider(INFURA_URL))
+        self.w3 = w3
 
     def get_block(self, block_number: int):
         block_data = self.w3.eth.get_block(block_number)
