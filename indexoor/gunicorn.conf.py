@@ -7,7 +7,7 @@ timeout = 10
 bind = "0.0.0.0:8000"
 loglevel = "debug"
 workers = 1 if development else multiprocessing.cpu_count() * 2 + 1
-worker_class = "sync"
+worker_class = "eventlet"
 worker_connections = 2000
 
 max_requests = 100000
