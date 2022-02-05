@@ -1,26 +1,36 @@
+from rich import pretty
+
+pretty.install()
 from eth import Eth
 from contract import Contract
+from model import Block, Transaction, Log
 import json
 
 eth = Eth()
 abi = json.load(open("./abis/erc721.json"))
 
 
-tx_hash = "0x8a9c3242a73433b25a17f8b5aa55533845945fa4c5a520bd44ae91bb4ff3eee0"
+# tx_hash = "0x8a9c3242a73433b25a17f8b5aa55533845945fa4c5a520bd44ae91bb4ff3eee0"
 tx_hash = "0x9d3eb421007c5c8a065444d3e24527b43d5c923e1d8e80d76f70784160d23d6b"
 
 
 transaction = eth.get_transaction(tx_hash)
 receipt = eth.get_transaction_receipt(tx_hash)
+
+l = Log(**receipt["logs"][0])
+
 block = eth.get_block("latest")
 
-tx_schema = {key: str(type(value)) for key, value in transaction.items()}
-receipt_schema = {key: str(type(value)) for key, value in receipt.items()}
-block_schema = {key: str(type(value)) for key, value in block.items()}
+blo = Block(**dict(block))
+tran = Transaction(**dict(transaction))
 
-json.dump(dict(tx_schema), open("./tx.json", "w"), indent=2)
-json.dump(dict(receipt_schema), open("./receipt.json", "w"), indent=2)
-json.dump(dict(block_schema), open("./block.json", "w"), indent=2)
+# tx_schema = {key: str(type(value)) for key, value in transaction.items()}
+# receipt_schema = {key: str(type(value)) for key, value in receipt.items()}
+# block_schema = {key: str(type(value)) for key, value in block.items()}
+
+# json.dump(dict(tx_schema), open("./tx.json", "w"), indent=2)
+# json.dump(dict(receipt_schema), open("./receipt.json", "w"), indent=2)
+# json.dump(dict(block_schema), open("./block.json", "w"), indent=2)
 
 # brunks_addr = "0x0651132f094551f9d4e40de3e1e2f8b7ac149c3a"
 

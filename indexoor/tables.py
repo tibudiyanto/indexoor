@@ -26,7 +26,7 @@ blocks = Table(
     Column("timestamp", TIMESTAMP),
 )
 
-blocks = Table(
+transactions = Table(
     "transactions",
     DB.metadata,
     Column("hash", BYTEA, primary_key=True),
@@ -46,7 +46,7 @@ blocks = Table(
     Column("value", INTEGER),
 )
 
-blocks = Table(
+logs = Table(
     "logs",
     DB.metadata,
     Column("block_hash", BYTEA),

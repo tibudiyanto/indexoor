@@ -2,6 +2,8 @@ import os
 
 from web3.auto.infura import w3
 
+from model import Block
+
 
 class Eth:
     def __init__(self):
@@ -18,3 +20,7 @@ class Eth:
     def get_transaction_receipt(self, transaction: str):
         receipt = self.w3.eth.get_transaction_receipt(transaction)
         return receipt
+
+    def index_block(self, block_number: int):
+        block_data = self.get_block(block_number)
+        block = Block(**dict(block_data))
