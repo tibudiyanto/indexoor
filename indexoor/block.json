@@ -1,0 +1,23 @@
+{
+  "baseFeePerGas": "<class 'int'>",
+  "difficulty": "<class 'int'>",
+  "extraData": "<class 'hexbytes.main.HexBytes'>",
+  "gasLimit": "<class 'int'>",
+  "gasUsed": "<class 'int'>",
+  "hash": "<class 'hexbytes.main.HexBytes'>",
+  "logsBloom": "<class 'hexbytes.main.HexBytes'>",
+  "miner": "<class 'str'>",
+  "mixHash": "<class 'hexbytes.main.HexBytes'>",
+  "nonce": "<class 'hexbytes.main.HexBytes'>",
+  "number": "<class 'int'>",
+  "parentHash": "<class 'hexbytes.main.HexBytes'>",
+  "receiptsRoot": "<class 'hexbytes.main.HexBytes'>",
+  "sha3Uncles": "<class 'hexbytes.main.HexBytes'>",
+  "size": "<class 'int'>",
+  "stateRoot": "<class 'hexbytes.main.HexBytes'>",
+  "timestamp": "<class 'int'>",
+  "totalDifficulty": "<class 'int'>",
+  "transactions": "<class 'list'>",
+  "transactionsRoot": "<class 'hexbytes.main.HexBytes'>",
+  "uncles": "<class 'list'>"
+}

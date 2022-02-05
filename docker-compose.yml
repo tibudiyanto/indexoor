@@ -14,3 +14,12 @@ services:
       - FLASK_ENV=development
     volumes:
       - ./indexoor:/home/worker/indexoor
+    command: ["gunicorn", "--config", "gunicorn.conf.py", "--reload", "web:app"]
+
+  indexoor-db:
+    container_name: indexoor-db
+    image: postgres:14.1-alpine
+    ports:
+      - 5432:5432
+    env_file:
+      - .env

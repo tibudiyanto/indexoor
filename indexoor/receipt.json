@@ -1,0 +1,16 @@
+{
+  "blockHash": "<class 'hexbytes.main.HexBytes'>",
+  "blockNumber": "<class 'int'>",
+  "contractAddress": "<class 'str'>",
+  "cumulativeGasUsed": "<class 'int'>",
+  "effectiveGasPrice": "<class 'int'>",
+  "from": "<class 'str'>",
+  "gasUsed": "<class 'int'>",
+  "logs": "<class 'list'>",
+  "logsBloom": "<class 'hexbytes.main.HexBytes'>",
+  "status": "<class 'int'>",
+  "to": "<class 'NoneType'>",
+  "transactionHash": "<class 'hexbytes.main.HexBytes'>",
+  "transactionIndex": "<class 'int'>",
+  "type": "<class 'str'>"
+}

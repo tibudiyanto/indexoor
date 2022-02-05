@@ -1,0 +1,21 @@
+{
+  "accessList": "<class 'list'>",
+  "blockHash": "<class 'hexbytes.main.HexBytes'>",
+  "blockNumber": "<class 'int'>",
+  "chainId": "<class 'str'>",
+  "from": "<class 'str'>",
+  "gas": "<class 'int'>",
+  "gasPrice": "<class 'int'>",
+  "hash": "<class 'hexbytes.main.HexBytes'>",
+  "input": "<class 'str'>",
+  "maxFeePerGas": "<class 'int'>",
+  "maxPriorityFeePerGas": "<class 'int'>",
+  "nonce": "<class 'int'>",
+  "r": "<class 'hexbytes.main.HexBytes'>",
+  "s": "<class 'hexbytes.main.HexBytes'>",
+  "to": "<class 'NoneType'>",
+  "transactionIndex": "<class 'int'>",
+  "type": "<class 'str'>",
+  "v": "<class 'int'>",
+  "value": "<class 'int'>"
+}

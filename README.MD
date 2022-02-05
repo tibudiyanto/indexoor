@@ -12,8 +12,8 @@ Just a way for me to learn more about eth chain data and also maybe try to index
 - [x] deduce a contract is an ERC1155
 - [x] create a starlette API
 - [x] Create web service endpoint to:
-  - [ ] Fetch an NFT contract info /assets/<contract_addr>
-  - [ ] Fetch metadata of an tokenID /assets/<contract_addr>/<token_id>
+  - [x] Fetch an NFT contract info /assets/<contract_addr>
+  - [x] Fetch metadata of an tokenID /assets/<contract_addr>/<token_id>
 - Index the chain from genesis for all NFT contract
 
 # Dev Notes
